@@ -1,6 +1,6 @@
-function validate(phone) {
-    const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    return regex.test(phone)
-}
-
-module.exports = validate;
+export default {
+    isValid(phone) {
+        const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+        return regex.test(phone)
+    },
+};
